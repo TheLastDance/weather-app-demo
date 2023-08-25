@@ -1,5 +1,3 @@
-// console.log("Application is running");
-
 // const getData = async (location) => {
 //   const url = "http://localhost:3000/weather?adress=" + location;
 //   try {

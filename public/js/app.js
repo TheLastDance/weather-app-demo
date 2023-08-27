@@ -22,7 +22,7 @@ const answer = document.querySelector(".answer");
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
-  const url = "http://localhost:3000/weather?adress=" + input.value;
+  const url = "/weather?adress=" + input.value;
 
   searchedLocation.textContent = '';
   answer.textContent = 'Loading...';

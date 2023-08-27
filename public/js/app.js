@@ -19,6 +19,7 @@ const form = document.querySelector('form');
 const input = document.querySelector('input');
 const searchedLocation = document.querySelector(".location");
 const answer = document.querySelector(".answer");
+const png = document.querySelector(".png");
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -31,9 +32,11 @@ form.addEventListener('submit', (e) => {
     res.json().then((json) => {
       if (json.error) {
         answer.innerHTML = json.error;
+        png.src = "";
       } else {
         searchedLocation.textContent = json.location;
-        answer.textContent = json.forecast;
+        answer.textContent = json.forecast.msg;
+        png.src = json.forecast.png;
       }
     })
   });

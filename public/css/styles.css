@@ -58,3 +58,8 @@ button {
   background: gray;
   border: 1px solid gray;
 }
+
+.png {
+  width: 50px;
+  margin: 25px 0;
+}
